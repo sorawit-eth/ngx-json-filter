@@ -1,0 +1,16 @@
+<div class="json-filter">
+  <ngx-filter-input
+    #filterInput
+    [minSearchTermLength]="minSearchTermLength"
+    (searchTermChanged)="onSearchTermChanged($event)"
+    (searchCanceled)="onSearchCanceled($event)"
+    (listNavigating)="onListNavigating($event)"></ngx-filter-input>
+  <div class="output-wrapper" *ngIf="filteredItems">
+    <ngx-filter-output
+      #filterOutput
+      [items]="filteredItems"
+      [titleProperty]="titleProperty"
+      (itemSelected)="onItemSelected($event)"
+      (itemSelectionCanceled)="onItemSelectionCanceled($event)"></ngx-filter-output>
+  </div>
+</div>

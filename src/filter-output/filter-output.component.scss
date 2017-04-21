@@ -1,0 +1,83 @@
+$accent-color: var(--accent-color, #26a69a);
+$subtitle-color: var(--subtitle-color, #666);
+$divider-color: var(--divider-color, #eee);
+$item-hover-background-color: var(--item-hover-background-color, #eff);
+$item-active-background-color: var(--item-active-background-color, #D8FAF6);
+$item-background-color: var(--item-background-color, #fff);
+
+// Need to use '/deep/' (aka '>>>') as the .highlight elements are dynamically created.
+// According to https://www.chromestatus.com/features/6750456638341120, it's a deprecated feature.
+// We may need inline styles with this solution: http://stackoverflow.com/questions/39794588/angular2-innerhtml-removes-styling
+/deep/ .highlight {
+  font-weight: 700;
+  color: $accent-color;
+}
+
+.filter-output {
+  .output-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1em;
+    background-color: $item-background-color;
+    border-bottom: solid thin $divider-color;
+
+    .result-count {
+      margin-left: auto;
+      font-weight: 600;
+      color: $subtitle-color;
+    }
+  }
+
+  .items {
+    margin: 0;
+    padding: 0;
+    background-color: $item-background-color;
+    max-height: 40em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: none;
+
+    .item {
+      padding: 1em;
+      outline: none;
+
+      &:not(:last-of-type) {
+        border-bottom: solid thin $divider-color;
+      }
+
+      &:focus {
+        background-color: $item-hover-background-color;
+      }
+
+      &.active {
+        background-color: $item-active-background-color;
+      }
+
+      &:hover {
+        background-color: $item-hover-background-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .item-title {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  .item-property {
+    padding-left: 1em;
+
+    .item-property-name {
+      font-size: 1em;
+      font-weight: 600;
+      color: $subtitle-color;
+    }
+
+    .item-property-value {
+      padding-left: 1em;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+$hint-text: #aaa;
+
+.hint-text {
+  font-size: .8em;
+  color: $hint-text;
+}
+
+.search-input {
+  input {
+    ~ .hint {
+      @extend .hint-text;
+      display: block;
+      margin-left: 3rem;
+      margin-top: -1.5em;
+    }
+  }
+
+  .material-icons {
+    line-height: 1.5;
+  }
+}

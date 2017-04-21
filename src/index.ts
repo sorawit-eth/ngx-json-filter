@@ -1,35 +1,32 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SampleComponent } from './sample.component';
-import { SampleDirective } from './sample.directive';
-import { SamplePipe } from './sample.pipe';
-import { SampleService } from './sample.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JsonFilterComponent } from './json-filter.component';
+import { FilterInputComponent } from './filter-input/filter-input.component';
+import { FilterOutputComponent } from './filter-output/filter-output.component';
 
-export * from './sample.component';
-export * from './sample.directive';
-export * from './sample.pipe';
-export * from './sample.service';
+export * from './json-filter.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
+    JsonFilterComponent,
+    FilterInputComponent,
+    FilterOutputComponent
   ],
   exports: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
+    JsonFilterComponent
   ]
 })
-export class SampleModule {
+export class JsonFilterModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SampleModule,
-      providers: [SampleService]
+      ngModule: JsonFilterModule,
+      providers: []
     };
   }
 }

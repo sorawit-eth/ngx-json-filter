@@ -1,0 +1,21 @@
+<div class="filter-output" role="navigation" aria-hidden="true" (keydown)="onKeyDown($event)">
+  <div class="output-header">
+    <div class="result-count">
+      {{ items? items.length: 0 }} {{ items && items.length > 1? 'items': 'item' }}
+    </div>
+  </div>
+  <ul *ngIf="items" #itemList class="items" role="menu">
+    <li *ngFor="let item of items"
+        class="item"
+        tabindex="0"
+        (click)="onItemSelected($event, item)"
+        (keydown)="onItemKeyDown($event, item)"
+        role="menuitem">
+      <h5 class="item-title" [innerHTML]="getItemTitle(item)"></h5>
+      <div class="item-property" *ngFor="let property of getDisplayProperties(item)">
+        <h6 class="item-property-name">{{ property }}</h6>
+        <p class="item-property-value" [innerHTML]="getDisplayValue(item, property)"></p>
+      </div>
+    </li>
+  </ul>
+</div>

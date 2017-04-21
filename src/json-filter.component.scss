@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+.json-filter {
+  font-family: "Noto Sans", "Open Sans", "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+
+  .output-wrapper {
+    position: absolute;
+    top: 3.1em;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+}

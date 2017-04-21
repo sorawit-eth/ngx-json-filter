@@ -1,0 +1,17 @@
+<div class="search-input">
+  <form
+    [formGroup]="formGroup"
+    (submit)="onFormSubmit($event, formGroup.value)">
+    <div class="input-field">
+      <i class="material-icons prefix">search</i>
+      <input
+        #searchTerm
+        id="search-filter"
+        type="text"
+        formControlName="searchTerm"
+        (keydown)="onKeyDown($event)">
+      <label for="search-filter">Search</label>
+      <span class="hint">Type at least {{ minSearchTermLength }} characters</span>
+    </div>
+  </form>
+</div>

@@ -18,7 +18,7 @@
   "keywords": [
     "angular"
   ],
-  "license": "MIT",
+  "license": "GNU",
   "bugs": {
     "url": "https://github.com/aesopturtle/ngx-json-filter/issues"
   },
@@ -56,5 +56,7 @@
   },
   "engines": {
     "node": ">=6.0.0"
+  },
+  "dependencies": {
   }
 }
