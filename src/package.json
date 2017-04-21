@@ -1,0 +1,26 @@
+{
+  "name": "ngx-json-filter",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aesopturtle/ngx-json-filter"
+  },
+  "author": {
+    "name": "Sorawit Wanitwarodom",
+    "email": "aesopturtle@msn.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aesopturtle/ngx-json-filter/issues"
+  },
+  "module": "ngx-json-filter.js",
+  "typings": "ngx-json-filter.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
