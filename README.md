@@ -69,4 +69,4 @@ $ npm run lint
 
 ## License
 
-MIT © [Sorawit Wanitwarodom](mailto:aesopturtle@msn.com)
+MIT ©
